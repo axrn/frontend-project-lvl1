@@ -1,0 +1,19 @@
+{
+  "name": "frontend-project-lvl1-axrn",
+  "version": "0.1.0",
+  "description": "first educational frontend project at Hexlet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axrn/frontend-project-lvl1.git"
+  },
+  "author": "Alexey Ryabokon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/axrn/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/axrn/frontend-project-lvl1#readme"
+}
