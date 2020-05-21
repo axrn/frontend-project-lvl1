@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "first educational frontend project at Hexlet",
   "main": "index.js",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
