@@ -8,5 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      run: make install
-      run: make lint
+    - uses: actions/checkout@v2
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+    - name: Install dependencies
+    - run: make install
+    - name: Run eslint
+    - run: make lint
