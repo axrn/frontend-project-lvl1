@@ -1,0 +1,15 @@
+env:
+  es6: true
+  node: true
+extends:
+  - airbnb-base
+globals:
+  Atomics: readonly
+  SharedArrayBuffer: readonly
+parserOptions:
+  ecmaVersion: 11
+  sourceType: module
+rules:
+  no-console: 0
+  import/extensions: 0
+  import/prefer-default-export: 0 //https://ru.hexlet.io/blog/posts/pochemu-ya-perestal-ispolzovat-eksport-po-umolchaniyu-v-modulyah-javascript
