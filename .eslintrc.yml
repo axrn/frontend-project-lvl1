@@ -12,4 +12,4 @@ parserOptions:
 rules:
   no-console: 0
   import/extensions: 0
-  import/prefer-default-export: 0 //https://ru.hexlet.io/blog/posts/pochemu-ya-perestal-ispolzovat-eksport-po-umolchaniyu-v-modulyah-javascript
+  import/prefer-default-export: 0 # https://ru.hexlet.io/blog/posts/pochemu-ya-perestal-ispolzovat-eksport-po-umolchaniyu-v-modulyah-javascript
