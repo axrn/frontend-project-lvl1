@@ -1,0 +1,12 @@
+name: lint-frontend-project-lvl1
+
+on: push
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      run: make install
+      run: make lint
