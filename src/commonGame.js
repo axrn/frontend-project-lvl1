@@ -1,12 +1,12 @@
 export function commonGame({
   descriptionText,
-  roundsToWin,
   getQuestionAndAnswer,
   showToUser,
   askUser,
 }) {
   return (username) => {
     showToUser(descriptionText);
+    const roundsToWin = 3;
     let roundsWon = 0;
     let state = 'GAME_RUNNING'; // GAME_RUNNING, USER_WIN, USER_LOOSE
     while (state === 'GAME_RUNNING') {

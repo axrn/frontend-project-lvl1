@@ -7,7 +7,6 @@ const maxNumber = 99;
 
 export default {
   descriptionText: 'Answer "yes" if the number is even, otherwise answer "no".',
-  roundsToWin: 3,
   showToUser: console.log,
   askUser: readlineSync.question,
   getQuestionAndAnswer: () => {
