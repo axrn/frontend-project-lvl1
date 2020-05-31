@@ -6,3 +6,7 @@ frontend-project-lvl1 [Brain Games](https://ru.hexlet.io/professions/frontend/pr
 BrainEven Game:
 
 [![asciicast](https://asciinema.org/a/SkTO4im532l6UnYzYO3OkZojU.svg)](https://asciinema.org/a/SkTO4im532l6UnYzYO3OkZojU)
+
+BrainCalc Game:
+
+[![asciicast](https://asciinema.org/a/pTixyCMLTqox7Hha6AbXrOuws.svg)](https://asciinema.org/a/pTixyCMLTqox7Hha6AbXrOuws)
