@@ -1,10 +1,12 @@
 export function commonGame({
   descriptionText,
   getQuestionAndAnswer,
-  showToUser,
   askUser,
+  showToUser,
+  askNameAndGreet,
 }) {
-  return (username) => {
+  return () => {
+    const username = askNameAndGreet();
     showToUser(descriptionText);
     const roundsToWin = 3;
     let roundsWon = 0;

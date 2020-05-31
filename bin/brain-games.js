@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
-import { askNameAndGreet } from '../src/cli.js';
+import { askNameAndGreet } from '../src/lib/cli.js';
+
 
 askNameAndGreet();
