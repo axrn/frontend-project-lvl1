@@ -1,13 +1,8 @@
-import { askUser, showToUser, askNameAndGreet } from '../lib/cli.js';
 import { getRandomInt, isEven } from '../lib/mathlib.js';
-import { commonGame } from './commonGame.js';
 
 
-const config = {
+export default {
   descriptionText: 'Answer "yes" if the number is even, otherwise answer "no".',
-  askUser,
-  showToUser,
-  askNameAndGreet,
   getQuestionAndAnswer: () => {
     const minNumber = 1;
     const maxNumber = 99;
@@ -17,5 +12,3 @@ const config = {
     return [question, answer];
   },
 };
-
-export const evenGame = commonGame(config);

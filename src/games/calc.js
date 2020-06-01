@@ -1,13 +1,8 @@
-import { askUser, showToUser, askNameAndGreet } from '../lib/cli.js';
 import { getRandomInt, getRandomOperator } from '../lib/mathlib.js';
-import { commonGame } from './commonGame.js';
 
 
-const config = {
+export default {
   descriptionText: 'What is the result of the expression?',
-  askUser,
-  showToUser,
-  askNameAndGreet,
   getQuestionAndAnswer: () => {
     const minNumber = 0;
     const maxNumber = 25;
@@ -19,5 +14,3 @@ const config = {
     return [question, answer];
   },
 };
-
-export const calcGame = commonGame(config);
