@@ -10,3 +10,7 @@ BrainEven Game:
 BrainCalc Game:
 
 [![asciicast](https://asciinema.org/a/pTixyCMLTqox7Hha6AbXrOuws.svg)](https://asciinema.org/a/pTixyCMLTqox7Hha6AbXrOuws)
+
+BrainGCD Game:
+
+[![asciicast](https://asciinema.org/a/p8hXxvC2nRq5TmK6BJOtlZKdD.svg)](https://asciinema.org/a/p8hXxvC2nRq5TmK6BJOtlZKdD)
