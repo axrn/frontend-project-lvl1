@@ -1,11 +1,13 @@
 import { askUser, showToUser, askNameAndGreet } from './lib/cli.js';
 import evenGame from './games/even.js';
 import calcGame from './games/calc.js';
+import gcdGame from './games/gcd.js';
 
 
 const games = {
   EVEN: evenGame,
   CALC: calcGame,
+  GCD: gcdGame,
 };
 Object.freeze(games);
 
@@ -18,7 +20,7 @@ function startGame(gameConfig) {
   for (let round = 0; round < roundsToWin; round += 1) {
     const [question, correctAnswer] = getQuestionAndAnswer();
     const userAnswer = askUser(question);
-    if (userAnswer === correctAnswer) {
+    if (String(userAnswer) === String(correctAnswer)) {
       showToUser('Correct!');
     } else {
       showToUser(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);

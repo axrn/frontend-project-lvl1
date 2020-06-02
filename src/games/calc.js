@@ -9,7 +9,7 @@ export default {
     const operand1 = getRandomInt(minNumber, maxNumber);
     const operand2 = getRandomInt(minNumber, maxNumber);
     const [opStr, opFunc] = getRandomOperator();
-    const answer = String(opFunc(operand1, operand2));
+    const answer = opFunc(operand1, operand2);
     const question = `Question: ${operand1} ${opStr} ${operand2}\r\nYour answer: `;
     return [question, answer];
   },
