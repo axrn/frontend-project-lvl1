@@ -3,7 +3,7 @@ import evenGame from './games/even.js';
 import calcGame from './games/calc.js';
 import gcdGame from './games/gcd.js';
 import progressionGame from './games/progression.js';
-import primGame from './games/prime.js';
+import primeGame from './games/prime.js';
 
 
 export const games = {
@@ -11,7 +11,7 @@ export const games = {
   CALC: calcGame,
   GCD: gcdGame,
   PROGRESSION: progressionGame,
-  PRIME: primGame,
+  PRIME: primeGame,
 };
 Object.freeze(games);
 
