@@ -36,20 +36,23 @@ export function getProgression(start, step, length) {
   if (length < 1) return [];
   const progression = [start];
   while (progression.length < length) {
-    const e = progression[progression.length - 1] + step;
-    progression.push(e);
+    const prev = progression[progression.length - 1];
+    const current = prev + step;
+    progression.push(current);
   }
   return progression;
 }
 
 export function getPrimeNumbers(maxN) {
-  const a = new Array(maxN + 1).fill(true);
-  a[0] = false;
-  a[1] = false;
-  for (let i = 2; i < a.length; i += 1) {
-    if (a[i]) {
-      for (let j = i * i; j < a.length; j += i) a[j] = false;
+  const arr = new Array(maxN + 1).fill(true);
+  arr[0] = false;
+  arr[1] = false;
+  for (let i = 2; i < arr.length; i += 1) {
+    if (arr[i]) {
+      for (let j = i * i; j < arr.length; j += i) arr[j] = false;
     }
   }
-  return a.map((e, i) => (e ? i : e)).filter((e) => e);
+  return arr
+    .map((e, i) => (e ? i : e))
+    .filter((e) => e);
 }
