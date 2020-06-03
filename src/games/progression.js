@@ -1,4 +1,4 @@
-import { getRandomInt, getProgression } from '../lib/mathlib.js';
+import { getRandomInt, getRandomElement, getProgression } from '../lib/mathlib.js';
 
 
 export default {
@@ -10,10 +10,11 @@ export default {
     const [minStep, maxStep] = [1, 10];
     const progStep = getRandomInt(minStep, maxStep);
     const progression = getProgression(progStart, progStep, progLength);
-    const answerElementIndex = getRandomInt(1, progLength - 2); // except first/last for gameplay
-    const incompliteProgression = progression.map((e, i) => (i === answerElementIndex ? '..' : e));
-    const answer = progression[answerElementIndex];
-    const question = `Question: ${incompliteProgression.join(' ')}\r\nYour answer: `;
+    const answer = getRandomElement(progression);
+    const placeholder = '..';
+    const incompliteProgression = progression.map((e) => (e === answer ? placeholder : e));
+    const splitter = ' ';
+    const question = `Question: ${incompliteProgression.join(splitter)}\r\nYour answer: `;
     return [question, answer];
   },
 };

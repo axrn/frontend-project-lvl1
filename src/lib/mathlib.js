@@ -2,7 +2,7 @@ export function getRandomInt(min, max) {
   return Math.floor(min + Math.random() * Math.floor(max - min + 1));
 }
 
-function getRandomElement(arr) {
+export function getRandomElement(arr) {
   const randomIndex = getRandomInt(0, arr.length - 1);
   return arr[randomIndex];
 }
