@@ -1,13 +1,14 @@
 {
   "name": "frontend-project-lvl1-axrn",
-  "version": "0.5.2",
+  "version": "0.6.2",
   "description": "first educational frontend project at Hexlet",
   "main": "index.js",
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
     "brain-calc": "bin/brain-calc.js",
-    "brain-gcd": "bin/brain-gcd.js"
+    "brain-gcd": "bin/brain-gcd.js",
+    "brain-progression": "bin/brain-progression.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

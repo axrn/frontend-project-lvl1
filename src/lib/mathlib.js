@@ -42,3 +42,13 @@ export function getGreatestCommonDivisor(a, b) {
   }
   return gcd;
 }
+
+export function getProgression(start, step, length) {
+  if (length < 1) return [];
+  const progression = [start];
+  while (progression.length < length) {
+    const e = progression[progression.length - 1] + step;
+    progression.push(e);
+  }
+  return progression;
+}

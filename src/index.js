@@ -2,12 +2,14 @@ import { askUser, showToUser, askNameAndGreet } from './lib/cli.js';
 import evenGame from './games/even.js';
 import calcGame from './games/calc.js';
 import gcdGame from './games/gcd.js';
+import progressionGame from './games/progression.js';
 
 
 const games = {
   EVEN: evenGame,
   CALC: calcGame,
   GCD: gcdGame,
+  PROGRESSION: progressionGame,
 };
 Object.freeze(games);
 
