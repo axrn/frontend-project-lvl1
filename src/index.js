@@ -6,7 +6,7 @@ import progressionGame from './games/progression.js';
 import primGame from './games/prime.js';
 
 
-const games = {
+export const games = {
   EVEN: evenGame,
   CALC: calcGame,
   GCD: gcdGame,
@@ -15,7 +15,7 @@ const games = {
 };
 Object.freeze(games);
 
-function startGame(gameConfig) {
+export function startGame(gameConfig) {
   const { descriptionText, getQuestionAndAnswer } = gameConfig;
   const username = askNameAndGreet();
   showToUser(descriptionText);
@@ -38,5 +38,3 @@ function startGame(gameConfig) {
     showToUser(`Let's try again, ${username}!`);
   }
 }
-
-export { games, startGame };
