@@ -52,3 +52,15 @@ export function getProgression(start, step, length) {
   }
   return progression;
 }
+
+export function getPrimeNumbers(maxN) {
+  const a = new Array(maxN + 1).fill(true);
+  a[0] = false;
+  a[1] = false;
+  for (let i = 2; i < a.length; i += 1) {
+    if (a[i]) {
+      for (let j = i * i; j < a.length; j += i) a[j] = false;
+    }
+  }
+  return a.map((e, i) => (e ? i : e)).filter((e) => e);
+}
