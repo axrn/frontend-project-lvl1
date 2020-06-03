@@ -3,14 +3,18 @@
 
 frontend-project-lvl1 [Brain Games](https://ru.hexlet.io/professions/frontend/projects/44)
 
-BrainEven Game:
+Even Game:
 
 [![asciicast](https://asciinema.org/a/SkTO4im532l6UnYzYO3OkZojU.svg)](https://asciinema.org/a/SkTO4im532l6UnYzYO3OkZojU)
 
-BrainCalc Game:
+Calc Game:
 
 [![asciicast](https://asciinema.org/a/pTixyCMLTqox7Hha6AbXrOuws.svg)](https://asciinema.org/a/pTixyCMLTqox7Hha6AbXrOuws)
 
-BrainGCD Game:
+GCD Game:
 
 [![asciicast](https://asciinema.org/a/p8hXxvC2nRq5TmK6BJOtlZKdD.svg)](https://asciinema.org/a/p8hXxvC2nRq5TmK6BJOtlZKdD)
+
+Progression Game
+
+[![asciicast](https://asciinema.org/a/uIywswBtKdCNnyaZoM7YNGJbe.svg)](https://asciinema.org/a/uIywswBtKdCNnyaZoM7YNGJbe)
