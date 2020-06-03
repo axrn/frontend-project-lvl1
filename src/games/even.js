@@ -1,4 +1,4 @@
-import { getRandomInt, isEven } from '../lib/mathlib.js';
+import { getRandomInt, isEven } from '../lib/math.js';
 
 
 export default {

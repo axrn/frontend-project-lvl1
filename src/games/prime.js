@@ -1,4 +1,4 @@
-import { getRandomElement, getPrimeNumbers } from '../lib/mathlib.js';
+import { getRandomElement, getPrimeNumbers } from '../lib/math.js';
 
 
 export default {

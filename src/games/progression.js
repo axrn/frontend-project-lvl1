@@ -1,4 +1,4 @@
-import { getRandomInt, getRandomElement, getProgression } from '../lib/mathlib.js';
+import { getRandomInt, getRandomElement, getProgression } from '../lib/math.js';
 
 
 export default {

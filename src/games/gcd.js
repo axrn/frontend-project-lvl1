@@ -1,4 +1,4 @@
-import { getRandomInt, getGreatestCommonDivisor } from '../lib/mathlib.js';
+import { getRandomInt, getGreatestCommonDivisor } from '../lib/math.js';
 
 
 export default {
