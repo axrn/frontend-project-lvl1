@@ -1,5 +1,5 @@
 export function getRandomInt(min, max) {
-  return Math.floor(min + Math.random() * Math.floor(min + max + 1));
+  return Math.floor(min + Math.random() * Math.floor(max - min + 1));
 }
 
 function getRandomElement(arr) {
