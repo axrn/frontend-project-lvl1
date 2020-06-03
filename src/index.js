@@ -1,4 +1,4 @@
-import { askUser, showToUser, askNameAndGreet } from './lib/cli.js';
+import { askUser, showToUser } from './lib/cli.js';
 import evenGame from './games/even.js';
 import calcGame from './games/calc.js';
 import gcdGame from './games/gcd.js';
@@ -17,7 +17,9 @@ Object.freeze(games);
 
 export function startGame(gameConfig) {
   const { descriptionText, getQuestionAndAnswer } = gameConfig;
-  const username = askNameAndGreet();
+  showToUser('Welcome to the Brain Games!');
+  const username = askUser('May I have your name? ');
+  showToUser(`Hello, ${username}!`);
   showToUser(descriptionText);
   const roundsToWin = 3;
   let userWin = true;
