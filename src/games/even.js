@@ -6,9 +6,9 @@ export default {
   getQuestionAndAnswer: () => {
     const minNumber = 1;
     const maxNumber = 99;
-    const randomNumber = getRandomInt(minNumber, maxNumber);
-    const answer = isEven(randomNumber) ? 'yes' : 'no';
-    const question = `Question: ${randomNumber}\r\nYour answer: `;
+    const number = getRandomInt(minNumber, maxNumber);
+    const answer = isEven(number) ? 'yes' : 'no';
+    const question = `Question: ${number}\r\nYour answer: `;
     return [question, answer];
   },
 };

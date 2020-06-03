@@ -11,15 +11,14 @@ export function isEven(number) {
   return number % 2 === 0;
 }
 
-function getDivisors(number) {
-  const divisors = [];
-  for (let i = 0; i <= number; i += 1) {
-    if (number % i === 0) divisors.push(i);
-  }
-  return divisors;
-}
-
 export function getGreatestCommonDivisor(a, b) {
+  const getDivisors = (number) => {
+    const divisors = [];
+    for (let i = 0; i <= number; i += 1) {
+      if (number % i === 0) divisors.push(i);
+    }
+    return divisors;
+  };
   const setDivA = new Set(getDivisors(a));
   const revDivB = getDivisors(b).reverse();
   let gcd = 1;

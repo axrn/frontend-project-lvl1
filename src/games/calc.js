@@ -6,16 +6,16 @@ export default {
   getQuestionAndAnswer: () => {
     const minNumber = 0;
     const maxNumber = 25;
-    const operand1 = getRandomInt(minNumber, maxNumber);
-    const operand2 = getRandomInt(minNumber, maxNumber);
+    const numberA = getRandomInt(minNumber, maxNumber);
+    const numberB = getRandomInt(minNumber, maxNumber);
     const operations = [
       ['+', (a, b) => a + b],
       ['-', (a, b) => a - b],
       ['*', (a, b) => a * b],
     ];
     const [opStr, opFunc] = getRandomElement(operations);
-    const answer = opFunc(operand1, operand2);
-    const question = `Question: ${operand1} ${opStr} ${operand2}\r\nYour answer: `;
+    const answer = opFunc(numberA, numberB);
+    const question = `Question: ${numberA} ${opStr} ${numberB}\r\nYour answer: `;
     return [question, answer];
   },
 };
