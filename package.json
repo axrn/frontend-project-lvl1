@@ -1,6 +1,6 @@
 {
   "name": "frontend-project-lvl1-axrn",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "description": "first educational frontend project at Hexlet",
   "main": "index.js",
   "bin": {

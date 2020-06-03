@@ -7,16 +7,6 @@ export function getRandomElement(arr) {
   return arr[randomIndex];
 }
 
-export function getRandomOperator() {
-  const operations = [
-    ['+', (a, b) => a + b],
-    ['-', (a, b) => a - b],
-    ['*', (a, b) => a * b],
-    // ['/', (a, b) => a / b],
-  ];
-  return getRandomElement(operations);
-}
-
 export function isEven(number) {
   return number % 2 === 0;
 }
