@@ -33,5 +33,5 @@ export default () => {
     const question = `Question: ${numberA} ${numberB}\r\nYour answer: `;
     return [question, answer];
   };
-  return [description, getQnA];
+  return { description, getQnA };
 };

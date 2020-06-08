@@ -18,5 +18,5 @@ export default () => {
     const question = `Question: ${numberA} ${opStr} ${numberB}\r\nYour answer: `;
     return [question, answer];
   };
-  return [description, getQnA];
+  return { description, getQnA };
 };

@@ -15,12 +15,12 @@ const getProgression = (start, step, length) => {
 export default () => {
   const description = 'What number is missing in the progression?';
   const getQnA = () => {
-    const progLength = 10;
+    const length = 10;
     const [minStart, maxStart] = [1, 10];
-    const progStart = getRandomInt(minStart, maxStart);
+    const start = getRandomInt(minStart, maxStart);
     const [minStep, maxStep] = [1, 10];
-    const progStep = getRandomInt(minStep, maxStep);
-    const progression = getProgression(progStart, progStep, progLength);
+    const step = getRandomInt(minStep, maxStep);
+    const progression = getProgression(start, step, length);
     const answer = getRandomElement(progression);
     const placeholder = '..';
     const incompliteProgression = progression.map((e) => (e === answer ? placeholder : e));
@@ -28,5 +28,5 @@ export default () => {
     const question = `Question: ${incompliteProgression.join(splitter)}\r\nYour answer: `;
     return [question, answer];
   };
-  return [description, getQnA];
+  return { description, getQnA };
 };
