@@ -1,5 +1,16 @@
-import { getRandomInt, getRandomElement, getProgression } from '../lib/math.js';
+import { getRandomInt, getRandomElement } from '../lib/math.js';
 
+
+const getProgression = (start, step, length) => {
+  if (length < 1) return [];
+  const progression = [start];
+  while (progression.length < length) {
+    const prev = progression[progression.length - 1];
+    const current = prev + step;
+    progression.push(current);
+  }
+  return progression;
+};
 
 export default () => {
   const description = 'What number is missing in the progression?';

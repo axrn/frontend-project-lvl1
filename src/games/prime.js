@@ -1,5 +1,19 @@
-import { getRandomElement, getPrimeNumbers } from '../lib/math.js';
+import { getRandomElement } from '../lib/math.js';
 
+
+const getPrimeNumbers = (maxN) => {
+  const arr = new Array(maxN + 1).fill(true);
+  arr[0] = false;
+  arr[1] = false;
+  for (let i = 2; i < arr.length; i += 1) {
+    if (arr[i]) {
+      for (let j = i * i; j < arr.length; j += i) arr[j] = false;
+    }
+  }
+  return arr
+    .map((e, i) => (e ? i : e))
+    .filter((e) => e);
+};
 
 export default () => {
   const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';

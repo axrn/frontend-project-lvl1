@@ -1,5 +1,7 @@
-import { getRandomInt, isEven } from '../lib/math.js';
+import { getRandomInt } from '../lib/math.js';
 
+
+const isEven = (number) => number % 2 === 0;
 
 export default () => {
   const description = 'Answer "yes" if the number is even, otherwise answer "no".';
