@@ -1,9 +1,9 @@
 import { getRandomInt, getRandomElement, getProgression } from '../lib/math.js';
 
 
-export default {
-  descriptionText: 'What number is missing in the progression?',
-  getQuestionAndAnswer: () => {
+export default () => {
+  const description = 'What number is missing in the progression?';
+  const getQnA = () => {
     const progLength = 10;
     const [minStart, maxStart] = [1, 10];
     const progStart = getRandomInt(minStart, maxStart);
@@ -16,5 +16,6 @@ export default {
     const splitter = ' ';
     const question = `Question: ${incompliteProgression.join(splitter)}\r\nYour answer: `;
     return [question, answer];
-  },
+  };
+  return [description, getQnA];
 };
