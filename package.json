@@ -25,6 +25,12 @@
   },
   "homepage": "https://github.com/axrn/frontend-project-lvl1#readme",
   "type": "module",
+  "keywords": [
+    "hexlet",
+    "education",
+    "braingames",
+    "cli"
+  ],
   "dependencies": {
     "readline-sync": "^1.4.10"
   },
