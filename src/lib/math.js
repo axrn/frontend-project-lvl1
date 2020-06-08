@@ -1,9 +1,3 @@
-export const getRandomInt = (min, max) => {
-  const random = min + Math.random() * Math.floor(max - min + 1);
-  return Math.floor(random);
-};
+export const getRandomInt = (min, max) => Math.floor(min + Math.random() * (max - min + 1));
 
-export const getRandomElement = (arr) => {
-  const randomIndex = getRandomInt(0, arr.length - 1);
-  return arr[randomIndex];
-};
+export const getRandomElement = (arr) => arr[getRandomInt(0, arr.length - 1)];
