@@ -1,6 +1,10 @@
 import { getRandomInt } from '../lib/math.js';
 
 
+const description = 'Find the greatest common divisor of given numbers.';
+const min = 1;
+const max = 100;
+
 const getGreatestCommonDivisor = (a, b) => {
   const getDivisors = (number) => {
     const divisors = [];
@@ -23,14 +27,11 @@ const getGreatestCommonDivisor = (a, b) => {
 };
 
 export default () => {
-  const description = 'Find the greatest common divisor of given numbers.';
   const getQnA = () => {
-    const minNumber = 1;
-    const maxNumber = 100;
-    const numberA = getRandomInt(minNumber, maxNumber);
-    const numberB = getRandomInt(minNumber, maxNumber);
-    const answer = getGreatestCommonDivisor(numberA, numberB);
-    const question = `Question: ${numberA} ${numberB}\r\nYour answer: `;
+    const numberA = getRandomInt(min, max);
+    const numberB = getRandomInt(min, max);
+    const answer = String(getGreatestCommonDivisor(numberA, numberB));
+    const question = `${numberA} ${numberB}`;
     return [question, answer];
   };
   return { description, getQnA };

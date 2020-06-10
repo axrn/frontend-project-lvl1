@@ -1,6 +1,13 @@
 import { getRandomInt, getRandomElement } from '../lib/math.js';
 
 
+const description = 'What number is missing in the progression?';
+const lengthOfProgression = 10;
+const [minStart, maxStart] = [1, 10];
+const [minStep, maxStep] = [1, 10];
+const placeholder = '..';
+const splitter = ' ';
+
 const getProgression = (start, step, length) => {
   if (length < 1) return [];
   const progression = [start];
@@ -13,19 +20,14 @@ const getProgression = (start, step, length) => {
 };
 
 export default () => {
-  const description = 'What number is missing in the progression?';
   const getQnA = () => {
-    const length = 10;
-    const [minStart, maxStart] = [1, 10];
     const start = getRandomInt(minStart, maxStart);
-    const [minStep, maxStep] = [1, 10];
     const step = getRandomInt(minStep, maxStep);
-    const progression = getProgression(start, step, length);
-    const answer = getRandomElement(progression);
-    const placeholder = '..';
-    const incompliteProgression = progression.map((e) => (e === answer ? placeholder : e));
-    const splitter = ' ';
-    const question = `Question: ${incompliteProgression.join(splitter)}\r\nYour answer: `;
+    const progression = getProgression(start, step, lengthOfProgression);
+    const missing = getRandomElement(progression);
+    const incompliteProgression = progression.map((e) => (e === missing ? placeholder : e));
+    const answer = String(missing);
+    const question = `${incompliteProgression.join(splitter)}`;
     return [question, answer];
   };
   return { description, getQnA };

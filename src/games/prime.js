@@ -1,6 +1,9 @@
 import { getRandomElement } from '../lib/math.js';
 
 
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const max = 100;
+
 const getPrimeNumbers = (maxN) => {
   const arr = new Array(maxN + 1).fill(true);
   arr[0] = false;
@@ -16,19 +19,17 @@ const getPrimeNumbers = (maxN) => {
 };
 
 export default () => {
-  const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const getQnA = () => {
-    const maxNumber = 100;
-    const primes = getPrimeNumbers(maxNumber);
+    const primes = getPrimeNumbers(max);
     const setOfPrimes = new Set(primes);
-    const oddAndNotPrimes = new Array(maxNumber)
+    const oddAndNotPrimes = new Array(max)
       .fill()
       .map((e, i) => i)
       .filter((e) => e % 2 === 1)
       .filter((e) => !setOfPrimes.has(e));
     const answer = getRandomElement(['yes', 'no']);
     const number = getRandomElement(answer === 'yes' ? primes : oddAndNotPrimes);
-    const question = `Question: ${number}\r\nYour answer: `;
+    const question = `${number}`;
     return [question, answer];
   };
   return { description, getQnA };
