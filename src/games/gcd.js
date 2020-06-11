@@ -6,32 +6,20 @@ const min = 1;
 const max = 100;
 
 const getGreatestCommonDivisor = (a, b) => {
-  const getDivisors = (number) => {
-    const divisors = [];
-    for (let i = 0; i <= number; i += 1) {
-      if (number % i === 0) divisors.push(i);
-    }
-    return divisors;
-  };
-  const setDivA = new Set(getDivisors(a));
-  const revDivB = getDivisors(b).reverse();
-  let gcd = 1;
-  for (let i = 0; i < revDivB.length; i += 1) {
-    const divisor = revDivB[i];
-    if (setDivA.has(divisor)) {
-      gcd = divisor;
-      break;
-    }
+  const least = a < b ? a : b;
+  const most = a > b ? a : b;
+  for (let i = least; i > 0; i -= 1) {
+    if (least % i === 0 && most % i === 0) return i;
   }
-  return gcd;
+  return 1;
 };
 
 export default () => {
   const getQnA = () => {
-    const numberA = getRandomInt(min, max);
-    const numberB = getRandomInt(min, max);
-    const answer = String(getGreatestCommonDivisor(numberA, numberB));
-    const question = `${numberA} ${numberB}`;
+    const A = getRandomInt(min, max);
+    const B = getRandomInt(min, max);
+    const answer = String(getGreatestCommonDivisor(A, B));
+    const question = `${A} ${B}`;
     return [question, answer];
   };
   return { description, getQnA };
