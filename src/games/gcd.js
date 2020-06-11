@@ -1,4 +1,4 @@
-import { getRandomInt } from '../lib/math.js';
+import { getRandomInt } from '../lib/utils.js';
 
 
 const description = 'Find the greatest common divisor of given numbers.';
@@ -14,13 +14,12 @@ const getGreatestCommonDivisor = (a, b) => {
   return 1;
 };
 
-export default () => {
-  const getQnA = () => {
-    const A = getRandomInt(min, max);
-    const B = getRandomInt(min, max);
-    const answer = String(getGreatestCommonDivisor(A, B));
-    const question = `${A} ${B}`;
-    return [question, answer];
-  };
-  return { description, getQnA };
+const getQuestionAndAnswer = () => {
+  const A = getRandomInt(min, max);
+  const B = getRandomInt(min, max);
+  const answer = String(getGreatestCommonDivisor(A, B));
+  const question = `${A} ${B}`;
+  return [question, answer];
 };
+
+export default () => ({ description, getQuestionAndAnswer });

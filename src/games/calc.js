@@ -1,4 +1,4 @@
-import { getRandomInt, getRandomElement } from '../lib/math.js';
+import { getRandomInt } from '../lib/utils.js';
 
 
 const description = 'What is the result of the expression?';
@@ -10,14 +10,14 @@ const operations = [
   ['*', (a, b) => a * b],
 ];
 
-export default () => {
-  const getQnA = () => {
-    const A = getRandomInt(min, max);
-    const B = getRandomInt(min, max);
-    const [operation, calc] = getRandomElement(operations);
-    const answer = String(calc(A, B));
-    const question = `${A} ${operation} ${B}`;
-    return [question, answer];
-  };
-  return { description, getQnA };
+const getQuestionAndAnswer = () => {
+  const A = getRandomInt(min, max);
+  const B = getRandomInt(min, max);
+  const operationIndex = getRandomInt(0, operations.length - 1);
+  const [operation, calc] = operations[operationIndex];
+  const answer = String(calc(A, B));
+  const question = `${A} ${operation} ${B}`;
+  return [question, answer];
 };
+
+export default () => ({ description, getQuestionAndAnswer });
