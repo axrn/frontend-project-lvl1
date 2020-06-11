@@ -12,11 +12,11 @@ const operations = [
 
 export default () => {
   const getQnA = () => {
-    const numberA = getRandomInt(min, max);
-    const numberB = getRandomInt(min, max);
+    const A = getRandomInt(min, max);
+    const B = getRandomInt(min, max);
     const [operation, calc] = getRandomElement(operations);
-    const answer = String(calc(numberA, numberB));
-    const question = `${numberA} ${operation} ${numberB}`;
+    const answer = String(calc(A, B));
+    const question = `${A} ${operation} ${B}`;
     return [question, answer];
   };
   return { description, getQnA };
