@@ -18,15 +18,19 @@ const getPrimeNumbers = (maxN) => {
     .filter((e) => e);
 };
 
+const getOddAndNotPrimes = (maxN, primes) => {
+  const setOfPrimes = new Set(primes);
+  return new Array(maxN)
+    .fill()
+    .map((e, i) => i)
+    .filter((e) => e % 2 === 1)
+    .filter((e) => !setOfPrimes.has(e));
+};
+
 export default () => {
   const getQnA = () => {
     const primes = getPrimeNumbers(max);
-    const setOfPrimes = new Set(primes);
-    const oddAndNotPrimes = new Array(max)
-      .fill()
-      .map((e, i) => i)
-      .filter((e) => e % 2 === 1)
-      .filter((e) => !setOfPrimes.has(e));
+    const oddAndNotPrimes = getOddAndNotPrimes(max, primes);
     const answer = getRandomElement(['yes', 'no']);
     const number = getRandomElement(answer === 'yes' ? primes : oddAndNotPrimes);
     const question = `${number}`;
