@@ -11,7 +11,7 @@ const getGreatestCommonDivisor = (a, b) => {
   const absB = Math.abs(b);
   const least = Math.min(absA, absB);
   for (let divisor = least; divisor > 0; divisor -= 1) {
-    if (absA % divisor === 0 && absB % divisor === 0) return divisor;
+    if (a % divisor === 0 && b % divisor === 0) return divisor;
   }
   return absA + absB;
 };
