@@ -2,8 +2,6 @@ import { getRandomInt } from '../lib/utils.js';
 
 
 const description = 'Find the greatest common divisor of given numbers.';
-const min = 1;
-const max = 100;
 
 const getGreatestCommonDivisor = (a, b) => {
   const absA = Math.abs(a);
@@ -15,17 +13,17 @@ const getGreatestCommonDivisor = (a, b) => {
   if (absB === 0) return absA;
   const least = Math.min(absA, absB);
   const most = Math.max(absA, absB);
-  for (let i = least; i > 0; i -= 1) {
-    if (least % i === 0 && most % i === 0) return i;
+  for (let divisor = least; divisor > 0; divisor -= 1) {
+    if (least % divisor === 0 && most % divisor === 0) return divisor;
   }
   return 1;
 };
 
 const getQuestionAndAnswer = () => {
-  const A = getRandomInt(min, max);
-  const B = getRandomInt(min, max);
-  const answer = String(getGreatestCommonDivisor(A, B));
-  const question = `${A} ${B}`;
+  const a = getRandomInt(1, 100);
+  const b = getRandomInt(1, 100);
+  const answer = String(getGreatestCommonDivisor(a, b));
+  const question = `${a} ${b}`;
   return [question, answer];
 };
 

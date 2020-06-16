@@ -2,14 +2,13 @@ import { getRandomInt } from '../lib/utils.js';
 
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const max = 100;
 
 const isEven = (n) => n % 2 === 0;
 
 const isPrime = (n) => {
   if (n < 2) return false;
-  for (let i = 2; i <= Math.sqrt(n); i += 1) {
-    if (n % i === 0) return false;
+  for (let divisor = 2; divisor <= Math.sqrt(n); divisor += 1) {
+    if (n % divisor === 0) return false;
   }
   return true;
 };
@@ -32,8 +31,8 @@ const getRandomOddNotPrime = (maxN) => {
 
 const getQuestionAndAnswer = () => {
   const answer = getRandomInt(0, 1) === 0 ? 'yes' : 'no';
-  const number = answer === 'yes' ? getRandomPrime(max) : getRandomOddNotPrime(max);
-  const question = `${number}`;
+  const number = answer === 'yes' ? getRandomPrime(100) : getRandomOddNotPrime(100);
+  const question = String(number);
   return [question, answer];
 };
 

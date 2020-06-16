@@ -2,11 +2,9 @@ import { getRandomInt } from '../lib/utils.js';
 
 
 const description = 'What number is missing in the progression?';
-const [minStart, maxStart] = [1, 10];
-const [minStep, maxStep] = [1, 10];
 const lengthOfProgression = 10;
 const placeholder = '..';
-const splitter = ' ';
+const separator = ' ';
 
 const getProgression = (start, step, length) => {
   if (length < 1) return [];
@@ -20,14 +18,13 @@ const getProgression = (start, step, length) => {
 };
 
 const getQuestionAndAnswer = () => {
-  const start = getRandomInt(minStart, maxStart);
-  const step = getRandomInt(minStep, maxStep);
+  const start = getRandomInt(1, 10);
+  const step = getRandomInt(1, 10);
   const progression = getProgression(start, step, lengthOfProgression);
   const missingIndex = getRandomInt(0, progression.length - 1);
-  const missing = progression[missingIndex];
-  const incompliteProgression = progression.map((e) => (e === missing ? placeholder : e));
+  const missing = progression.splice(missingIndex, 1, placeholder);
   const answer = String(missing);
-  const question = `${incompliteProgression.join(splitter)}`;
+  const question = progression.join(separator);
   return [question, answer];
 };
 

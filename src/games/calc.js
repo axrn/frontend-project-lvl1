@@ -2,8 +2,6 @@ import { getRandomInt } from '../lib/utils.js';
 
 
 const description = 'What is the result of the expression?';
-const min = 0;
-const max = 25;
 const operations = [
   ['+', (a, b) => a + b],
   ['-', (a, b) => a - b],
@@ -11,12 +9,12 @@ const operations = [
 ];
 
 const getQuestionAndAnswer = () => {
-  const A = getRandomInt(min, max);
-  const B = getRandomInt(min, max);
+  const a = getRandomInt(0, 25);
+  const b = getRandomInt(0, 25);
   const operationIndex = getRandomInt(0, operations.length - 1);
-  const [operation, calc] = operations[operationIndex];
-  const answer = String(calc(A, B));
-  const question = `${A} ${operation} ${B}`;
+  const [operation, calculate] = operations[operationIndex];
+  const answer = String(calculate(a, b));
+  const question = `${a} ${operation} ${b}`;
   return [question, answer];
 };
 
